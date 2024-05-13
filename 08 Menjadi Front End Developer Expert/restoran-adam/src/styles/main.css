@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: -0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 150;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: space-between;
+  transition: min-height 0.3s;
+  z-index: 100;
+}
+
+.header__title {
+  width: 80px;
+  display: inline-block;
+}
+
+#drawer {
+  background-color: #111;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  background-color: white;
+}
+
+#drawer ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  justify-content: right;
+}
+
+#drawer li {
+  padding: 5px 5px;
+  min-height: 44px;
+}
+
+#drawer a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFBB70;
+  padding: 10px 5px;
+}
+
+#drawer a:hover {
+  color: #ED9455;
+}
+
+#hamburger {
+  font-size: 32px;
+  text-decoration: none;
+  color: black;
+  display: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 3px 15px;
+}
+
+#hamburger:focus, #hamburger:active {
+  outline: auto;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../public/images/heros/hero-image_4.jpg');
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+#maincontent {
+  margin: 40px 0;
+}
+
+#maincontent h1 {
+  text-align: center;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.restaurant {
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant img {
+  max-width: 100%;
+  height: auto;
+}
+
+.restaurant .description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.restaurant p span {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #ffbb70;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+  #drawer {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 90px;
+    background-color: #FFBB70;
+    transform: translate(-500px, 0);
+  }
+
+  #drawer li {
+    display: block;
+  }
+
+  #drawer a {
+    display: block;
+    color: black;
+  }
+
+  #drawer.open {
+    transform: translate(0, 0);
+  }
+
+  #drawer ul{
+    display: block;
+  }
+
+  #hamburger {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 573px) {
+  .restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .restaurant-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Image Figure</title>
+    <style>
+      form * {
+        font-size: 1rem;
+      }
+
+    </style>
+  </head>
+  <body>
+    <br><br>
+    <template id="blogItem">
+      <style>
+        :host {
+          padding: 1rem 0.8rem;
+          display: block;
+
+          border-radius: 4px;
+          box-shadow: 0 0 2px 2px #33333377;
+        }
+
+        .blog__title {
+          margin-block-start: 0;
+          margin-block-end: 1rem;
+
+          font-size: 1.3em;
+          font-weight: bold;
+        }
+
+        p {
+          margin-block-start: 0;
+        }
+      </style>
+      <h5 class="blog__title">
+        <slot name="title">Judul Artikel</slot>
+      </h5>
+      <div class="blog__description">
+        <slot name="short-description">Deskripsi2 pendek artikel</slot>
+      </div>
+      <slot>ini slot ke3</slot>
+      <br>
+      <slot>ini slot ke4</slot>
+    </template>
+    
+      <!-- <blog-list>
+        <blog-item data-id="1">
+          <a href="#" slot="title">Cara Memulai Belajar Pemrograman</a>
+          <p slot="short-description">
+            Panduan untuk pemula yang ingin memulai belajar pemrograman.
+          </p>
+        </blog-item>
+        <blog-item data-id="2">
+          <a href="#" slot="title">Tips Efektif dalam Pengembangan Web</a>
+          <p slot="short-description">
+            Tips dan trik untuk menjadi pengembang web yang lebih baik.
+          </p>
+        </blog-item>
+        <blog-item data-id="3">
+          <a href="#" slot="title">Mengenal Konsep Web Component</a>
+          <p slot="short-description">
+            Pengenalan singkat tentang Web Component dan komponen-komponennya.
+          </p>
+        </blog-item>
+      </blog-list> -->
+
+      <hr>
+      <blog-list></blog-list>
+      <blog-list>
+        <blog-item data-id="1"></blog-item>
+      </blog-list>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr>
+    <h1>Shadow DOM untuk Web Component</h1>
+
+    <form>
+      <div>
+        <label for="cvc">
+          Kode validasi kartu
+          <popup-info
+            img="https://raw.githubusercontent.com/dicodingacademy/a163-bfwd-labs/099-shared-files/info.png"
+            description="Card Validation Code (CVC) Anda adalah fitur keamanan tambahan - ada di 3 atau 4 nomor terakhir pada sisi belakang kartu Anda."
+          ></popup-info>
+        </label><br />
+        <input name="cvc" id="cvc" />
+      </div>
+    </form>
+    <hr>
+    <style>
+      figure {
+        max-width: 220px;
+        margin: 0;
+        padding: 5px;
+        border: 1px #c0c0c0 solid;
+     
+        display: flex;
+        flex-flow:  column;
+      }
+     
+      figure > img {
+        max-width: 100%;
+      }
+     
+      figure > figcaption {
+        padding: 3px;
+        background-color: #222;
+     
+        text-align: center;
+     
+        color: #fff;
+        font-family: sans-serif;
+        font-size: smaller;
+        font-style: italic;
+      }
+    </style>
+    <figure>
+      <img src="./src/logo-g.jpg" alt="Dicoding Logo g" width="220" />
+      <figcaption>Huruf g dalam logo Dicoding loh</figcaption>
+    </figure>
+    <image-figure src="./src/logo-g.jpg" altImg="Logo G DICODING NIH" font="15px">
+      <span>Huruf g dalam logo Dicoding</span>
+    </image-figure>
+    <br>
+    <hr>
+     <my-paragraph color="red" size="24" fstyle="bold">
+      Aku adalah konten yang akan tampil dari my my-paragraph.
+     </my-paragraph>
+     <my-paragraph color="yellow" size="26" fstyle="italic"></my-paragraph>
+     <div>
+      <button id="changeColor">Ubah Atribut Color</button>
+      <button id="changeSize">Ubah Atribut Size</button>
+      <button id="changeStyle">Ubah Atribut Font-style</button>
+      <button id="removeElement">Hilangkan Elemen</button>
+    </div>
+    <!--
+    <hr>
+    <blog-list></blog-list>
+    <blog-list></blog-list> -->
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

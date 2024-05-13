@@ -1,0 +1,141 @@
+body {
+    
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: cornflowerblue;
+    color: white;
+  }
+
+
+/* FORM NOTE */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#buttonSave {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#buttonSave:hover {
+    background-color: #0060c7;
+}
+
+#notesList {
+    margin-top: 30px;
+}
+
+.note {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+/* NOTE ITEM */
+.char-list {
+    margin-block: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    column-gap: 24px;
+    row-gap: 32px;
+    margin: 0 20px
+}
+
+.char-item {
+    border: 1px solid black;
+    border-radius: 8px;
+    /* padding: 16px; */
+    padding: 16px 16px 34px 16px;
+
+    overflow: hidden;
+    transition: all 150ms ease-in;
+}
+
+.char-item:hover,
+.char-item:focus-visible {
+    scale: 1.05;
+    box-shadow: 0 2px 4px 2px #33333377;
+}
+
+.char-item .char {
+    text-align: center;
+    font-size: 1.5em;
+    color: cornflowerblue;
+}
+
+.char-item .char__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+}
+.char-item .char__name {
+    font-weight: 400;
+}
+.char-item .char__pronounce {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.char-item .char__example {
+    margin-block-start: 1.5rem;
+    text-align: center;
+}
+
+.char-item .char__example-img {
+    width: 75%;
+    margin-block-end: 1rem;
+}
+
+#archivedStatus {
+    font-size: 11px;
+    font-style: italic;
+}
+
+footer {
+    background-color: cornflowerblue;
+
+    color: white;
+}

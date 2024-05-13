@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Image Figure</title>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Ini adalah konten &lt;h1&gt; dalam light DOM</h1> -->
+    
+ 
+    <hr />
+    <my-paragraph color="red" size="20" italic="normal"></my-paragraph>
+    <hr />
+    <div>
+      <button id="changeColor">Ubah Color</button>
+      <button id="changeSize">Ubah Size</button>
+      <button id="changeItalic">Ubah Italic</button>
+      
+    </div>
+    <image-figure 
+    src="src/logo-g.jpg" 
+    alt="Dicoding Logo g" 
+    caption="Huruf g dalam logo Dicoding">
+  </image-figure>
+  <figure>
+    <img src="src/logo-g.jpg" alt="Dicoding Logo g" width="220" />
+    <figcaption>Huruf g dalam logo Dicoding</figcaption>
+  </figure>
+    <!-- <blog-list>
+    </blog-list> -->
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
