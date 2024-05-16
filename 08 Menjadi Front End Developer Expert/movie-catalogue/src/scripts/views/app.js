@@ -7,6 +7,7 @@ class App {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
+
     this._initialAppShell();
   }
 
@@ -16,6 +17,8 @@ class App {
       drawer: this._drawer,
       content: this._content,
     });
+
+    // kita bisa menginisiasikan komponen lain bila ada
   }
 
   async renderPage() {
