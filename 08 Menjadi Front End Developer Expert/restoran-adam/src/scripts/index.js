@@ -12,8 +12,10 @@ data.restaurants.forEach((restaurant) => {
   const firstTwoSentences = restaurant.description.split('.').slice(0, 2).join('.') + '.';
   
   restaurantElement.innerHTML = `
-    <h2 tabindex="1">${restaurant.name}</h2>
+  <a href="${restaurant.id}">
     <img src="${restaurant.pictureId}" alt="${restaurant.name}">
+  </a>
+    <h2 tabindex="1">${restaurant.name}</h2>
     <p class="description">${firstTwoSentences}</p>
     <p><span>City:</span> ${restaurant.city}</p>
     <p><span>Rating:</span> ${restaurant.rating}</p>
