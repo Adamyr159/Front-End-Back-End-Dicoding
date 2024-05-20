@@ -120,35 +120,97 @@ body {
   text-align: center;
 }
 
-.restaurant-list {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-  padding: 0 20px;
-  margin-top: 30px;
+.content {
+  margin: 0 auto;
+  min-height: 100%;
 }
+ 
+
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 0 30px;
+  margin-top: 30px 0;
+}
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-item__header {
+  position: relative;
+} 
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  top: 10px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+ 
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+}
+ 
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+ 
+.restaurant-item .restaurant-item__content h3 a {
+  color: #FFBB70;
+  text-decoration: none;
+}
+
+.restaurant-item .restaurant-item__content h3 a:hover {
+  color: #ED9455;
+  text-decoration: none;
+}
+ 
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+
 
 .restaurant {
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+ 
+.restaurant .restaurant__poster {
+  width: 100%;
+  max-width: 400px;
+}
+ 
+.restaurant .restaurant__info h4 {
+  margin: 8px 0;
 }
 
-.restaurant img {
-  max-width: 100%;
-  height: auto;
-}
 
-.restaurant .description {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-}
-
-.restaurant p span {
-  font-weight: bold;
-}
 
 footer {
   background-color: #ffbb70;
@@ -157,4 +219,3 @@ footer {
   align-items: center;
   justify-content: center;
 }
-

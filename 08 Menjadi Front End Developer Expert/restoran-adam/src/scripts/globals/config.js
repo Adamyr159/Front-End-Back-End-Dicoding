@@ -1,7 +1,7 @@
 const CONFIG = {
     // KEY: 'ddfa9a25a16552ceeb5a34bccf0e2c1c',
     BASE_URL: 'https://restaurant-api.dicoding.dev/',
-    // BASE_IMAGE_URL: 'https://image.tmdb.org/t/p/w500/',
+    BASE_IMAGE_URL: 'https://restaurant-api.dicoding.dev/images/small/',
     DEFAULT_LANGUAGE: 'en-us',
     CACHE_NAME: 'Restaurants-V1',
     DATABASE_NAME: 'restaurants-database',

@@ -2,7 +2,7 @@ import CONFIG from './config';
 
 const API_ENDPOINT = {
   BERANDA: `${CONFIG.BASE_URL}/list`,
-//   DETAIL: (id) => `${CONFIG.BASE_URL}movie/${id}?api_key=${CONFIG.KEY}`,
+  DETAIL: (id) => `${CONFIG.BASE_URL}/detail/${id}`,
 };
 
 export default API_ENDPOINT;

@@ -12,6 +12,13 @@ const app = new App({
   content: document.querySelector('#mainContent'),
 });
 
+window.addEventListener("hashchange", () => {
+  app.renderPage();
+});
+
+window.addEventListener("load", async () => {
+  app.renderPage();
+});
 // const restaurantList = document.getElementById("restaurant-list");
 
 // data.restaurants.forEach((restaurant) => {
