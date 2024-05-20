@@ -1,0 +1,44 @@
+@media screen and (max-width: 550px) {
+    #navigationDrawer {
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 90px;
+      background-color: #FFBB70;
+      transform: translate(-500px, 0);
+    }
+  
+    #navigationDrawer li {
+      display: block;
+    }
+  
+    #navigationDrawer a {
+      display: block;
+      color: black;
+    }
+  
+    #navigationDrawer.open {
+      transform: translate(0, 0);
+    }
+  
+    #navigationDrawer ul{
+      display: block;
+    }
+  
+    #hamburgerButton {
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 573px) {
+    .restaurant-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .restaurant-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

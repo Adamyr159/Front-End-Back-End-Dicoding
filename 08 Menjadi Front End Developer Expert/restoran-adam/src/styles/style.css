@@ -45,26 +45,26 @@ body {
   display: inline-block;
 }
 
-#drawer {
+#navigationDrawer {
   background-color: #111;
   width: 100%;
   transition: transform 0.3s ease-in-out;
   background-color: white;
 }
 
-#drawer ul {
+#navigationDrawer ul {
   list-style-type: none;
   display: flex;
   gap: 20px;
   justify-content: right;
 }
 
-#drawer li {
+#navigationDrawer li {
   padding: 5px 5px;
   min-height: 44px;
 }
 
-#drawer a {
+#navigationDrawer a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -72,11 +72,11 @@ body {
   padding: 10px 5px;
 }
 
-#drawer a:hover {
+#navigationDrawer a:hover {
   color: #ED9455;
 }
 
-#hamburger {
+#hamburgerButton {
   font-size: 32px;
   text-decoration: none;
   color: black;
@@ -88,7 +88,7 @@ body {
   padding: 3px 15px;
 }
 
-#hamburger:focus, #hamburger:active {
+#hamburgerButton:focus, #hamburgerButton:active {
   outline: auto;
 }
 
@@ -112,11 +112,11 @@ body {
   color: white;
 }
 
-#maincontent {
+#mainContent {
   margin: 40px 0;
 }
 
-#maincontent h1 {
+#mainContent h1 {
   text-align: center;
 }
 
@@ -158,47 +158,3 @@ footer {
   justify-content: center;
 }
 
-@media screen and (max-width: 550px) {
-  #drawer {
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 90px;
-    background-color: #FFBB70;
-    transform: translate(-500px, 0);
-  }
-
-  #drawer li {
-    display: block;
-  }
-
-  #drawer a {
-    display: block;
-    color: black;
-  }
-
-  #drawer.open {
-    transform: translate(0, 0);
-  }
-
-  #drawer ul{
-    display: block;
-  }
-
-  #hamburger {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 573px) {
-  .restaurant-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .restaurant-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
