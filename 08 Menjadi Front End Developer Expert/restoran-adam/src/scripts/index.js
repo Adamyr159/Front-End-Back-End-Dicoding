@@ -2,6 +2,7 @@ import "regenerator-runtime"; /* for async await transpile */
 import "../styles/style.css";
 import "../styles/responsive.css";
 import App from './views/app';
+import swRegister from './utils/sw-register';
 // import data from '../public/data/DATA.json';
 
 console.log("Hello Coders! :)");
@@ -18,6 +19,7 @@ window.addEventListener("hashchange", () => {
 
 window.addEventListener("load", async () => {
   app.renderPage();
+  swRegister();
 });
 // const restaurantList = document.getElementById("restaurant-list");
 
