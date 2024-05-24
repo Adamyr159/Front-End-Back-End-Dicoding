@@ -10,14 +10,15 @@ class App {
 
     this._initialAppShell();
   }
+
   _initialAppShell() {
     // TODO: initial Drawer
     DrawerInitiator.init({
-        button: this._button,
-        drawer: this._drawer,
-        content: this._content,
-      });
-      
+      button: this._button,
+      drawer: this._drawer,
+      content: this._content,
+    });
+
     // kita bisa menginisiasikan komponen lain bila ada
   }
 

@@ -16,17 +16,23 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div class="row">
         <div class="column menu-column">
             <h2>Menu Makanan</h2>
-            ${restaurant.menus.foods.map((food) => `
+            ${restaurant.menus.foods
+              .map(
+                (food) => `
               <ul class="menu-list">
-                  <li class="menu-item">${ food.name }</li>
+                  <li class="menu-item">${food.name}</li>
               </ul>
-            `).join("")}
+            `
+              )
+              .join("")}
         </div>
         <div class="column menu-column">
             <h2>Menu Minuman</h2>
-            ${restaurant.menus.drinks.map((drink) => `
+            ${restaurant.menus.drinks
+              .map(
+                (drink) => `
               <ul class="menu-list">
-                  <li class="menu-item">${ drink.name }</li>
+                  <li class="menu-item">${drink.name}</li>
               </ul>
             `).join("")}
         </div>
@@ -34,7 +40,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div class="row">
       <h2>Pendapat Mereka</h2>
         <div class="column review-column">
-            ${restaurant.customerReviews.map((cust) => `
+            ${restaurant.customerReviews
+              .map(
+                (cust) => `
             <div class="review-card">
                 <h5 class="review-title">${cust.name} ⭐️5</h5>
                 <p class="review-text">${cust.review}</p>
@@ -50,12 +58,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
-      <img class="restaurant-item__header__poster" alt="${restaurant.name}"
-           src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
+      <img class="restaurant-item__header__poster" alt="${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
       <div class="restaurant-item__header__rating">
-        <p>⭐️<span class="restaurant-item__header__rating__score">${
-          restaurant.rating
-        }</span></p>
+        <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
       </div>
     </div>
     <div class="restaurant-item__content">
@@ -70,16 +75,16 @@ const createLikeButtonTemplate = () => `
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
- 
+
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-export { 
-  createRestaurantItemTemplate, 
+export {
+  createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
   createLikeButtonTemplate,
-  createLikedButtonTemplate
+  createLikedButtonTemplate,
 };

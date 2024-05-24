@@ -1,7 +1,7 @@
-import Restaurant from '../../data/restaurant-source';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 
-const Home = {
+const Like = {
   async render() {
     return `
     <div class="content">
@@ -12,12 +12,13 @@ const Home = {
   },
 
   async afterRender() {
-    const restaurants = await Restaurant.homeRestaurant();
+    const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
     const restaurantContainer = document.querySelector('#restaurants');
+
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
   },
 };
 
-export default Home;
+export default Like;

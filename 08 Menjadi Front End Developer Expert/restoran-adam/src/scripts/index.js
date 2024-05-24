@@ -1,11 +1,11 @@
-import "regenerator-runtime"; /* for async await transpile */
-import "../styles/style.css";
-import "../styles/responsive.css";
+import 'regenerator-runtime'; /* for async await transpile */
+import '../styles/style.css';
+import '../styles/responsive.css';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 // import data from '../public/data/DATA.json';
 
-console.log("Hello Coders! :)");
+console.log('Hello Coders! :)');
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
@@ -13,11 +13,11 @@ const app = new App({
   content: document.querySelector('#mainContent'),
 });
 
-window.addEventListener("hashchange", () => {
+window.addEventListener('hashchange', () => {
   app.renderPage();
 });
 
-window.addEventListener("load", async () => {
+window.addEventListener('load', async () => {
   app.renderPage();
   swRegister();
 });
@@ -27,7 +27,7 @@ window.addEventListener("load", async () => {
 //   const restaurantElement = document.createElement("div");
 //   restaurantElement.classList.add("restaurant");
 //   const firstTwoSentences = restaurant.description.split('.').slice(0, 2).join('.') + '.';
-  
+
 //   restaurantElement.innerHTML = `
 //   <a href="${restaurant.id}">
 //     <img src="${restaurant.pictureId}" alt="${restaurant.name}">
@@ -41,11 +41,10 @@ window.addEventListener("load", async () => {
 //   restaurantList.appendChild(restaurantElement);
 // });
 
-
 // const hamburgerButtonElement = document.querySelector('#hamburger');
 // const drawerElement = document.querySelector('#drawer');
 // const heroElement = document.querySelector('.hero');
- 
+
 // hamburgerButtonElement.addEventListener('click', event => {
 //   drawerElement.classList.toggle('open');
 //   event.stopPropagation();

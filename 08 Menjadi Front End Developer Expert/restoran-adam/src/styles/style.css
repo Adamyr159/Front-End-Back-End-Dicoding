@@ -304,6 +304,11 @@ body {
   cursor: pointer;
 }
 
+button, a, input, textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
 footer {
   background-color: #ffbb70;
   height: 50px;
