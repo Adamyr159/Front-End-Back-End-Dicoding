@@ -99,7 +99,7 @@ body {
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../public/images/heros/hero-image_4.jpg");
+    url("../public/images/heros/hero-image_2.jpg");
   width: 100%;
   height: 500px;
   object-fit: cover;
@@ -118,8 +118,10 @@ body {
   margin: 40px 0;
 }
 
-#mainContent h1 {
+#mainContent h2 {
   text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -217,11 +219,25 @@ body {
   margin: auto;
   padding: 20px;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
 
-.address,
-.city,
+.column {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.image-column img.restaurant-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .description {
-  margin-top: 10px;
+  margin: 20px 0 20px 15px;
 }
 
 /* Menu styles */
@@ -262,6 +278,10 @@ body {
   margin-bottom: 20px;
 }
 
+.review-customer-heading {
+  margin-top: 20px;
+  width: 100%;
+}
 .review-card h5 {
   margin: 0;
   font-size: 1.2rem;
@@ -305,8 +325,7 @@ body {
 }
 
 button, a, input, textarea {
-  min-height: 44px;
-  min-width: 44px;
+  padding: 20px 0;
 }
 
 footer {
@@ -315,4 +334,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap; 
+  padding: 10px; 
 }

@@ -7,11 +7,13 @@ const createRestaurantDetailTemplate = (restaurant) => `
             <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" class="restaurant-image">
         </div>
         <div class="column details-column">
-            <h1 class="resto-name">${restaurant.name}</h1>
-            <p class="address"><strong>Alamat:</strong> ${restaurant.address}</p>
+            <h2 class="resto-name">${restaurant.name}</h2>
+            <p class="rating"><strong>Rating:</strong> ${restaurant.rating}</p>
+            <p class="categories"><strong>Kategori:</strong> : <span>${restaurant.categories.map((categorie) => categorie.name).join(", ")}</span></p>
             <p class="city"><strong>Kota:</strong> ${restaurant.city}</p>
-            <p class="description">${restaurant.description}</p>
+            <p class="address"><strong>Alamat:</strong> ${restaurant.address}</p>
         </div>
+            <p class="description">${restaurant.description}</p>
     </div>
     <div class="row">
         <div class="column menu-column">
@@ -38,7 +40,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
         </div>
     </div>
     <div class="row">
-      <h2>Pendapat Mereka</h2>
+      <h2 class="review-customer-heading">Pendapat Mereka</h2>
         <div class="column review-column">
             ${restaurant.customerReviews
               .map(
@@ -54,7 +56,6 @@ const createRestaurantDetailTemplate = (restaurant) => `
   </div>
   
     `;
-// jangan lupa masukin review customer di createRestaurantDetailTemplate
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
