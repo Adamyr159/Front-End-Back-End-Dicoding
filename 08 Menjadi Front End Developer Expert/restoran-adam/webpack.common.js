@@ -44,38 +44,13 @@ module.exports = {
       ],
     }),
     new WorkboxWebpackPlugin.GenerateSW({
-      swDest: "./sw.bundle.js",
+      swDest: './sw.bundle.js',
       runtimeCaching: [
         {
-          urlPattern: ({ url }) =>
-            url.href.startsWith("https://restaurant-api.dicoding.dev/list"),
-          handler: "StaleWhileRevalidate",
+          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/'),
+          handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: "therestaurantdb-api",
-          },
-        },
-        {
-          urlPattern: ({ url }) =>
-            url.href.startsWith(
-              "https://restaurant-api.dicoding.dev/images/medium/"
-            ) ||
-            url.href.startsWith(
-              "https://restaurant-api.dicoding.dev/images/small/"
-            ) ||
-            url.href.startsWith(
-              "https://restaurant-api.dicoding.dev/images/large/"
-            ),
-          handler: "StaleWhileRevalidate",
-          options: {
-            cacheName: "therestaurantdb-image-api",
-          },
-        },
-        {
-          urlPattern: ({ url }) =>
-            url.href.startsWith("https://restaurant-api.dicoding.dev/detail/"),
-          handler: "StaleWhileRevalidate",
-          options: {
-            cacheName: "therestaurantdb-detail-api",
+            cacheName: 'therestaurantdb-api',
           },
         },
       ],
