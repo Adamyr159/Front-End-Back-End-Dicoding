@@ -1,4 +1,4 @@
-import CONFIG from "../../globals/config";
+import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="container">
@@ -9,7 +9,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <div class="column details-column">
             <h2 class="resto-name">${restaurant.name}</h2>
             <p class="rating"><strong>Rating:</strong> ${restaurant.rating}</p>
-            <p class="categories"><strong>Kategori:</strong> : <span>${restaurant.categories.map((categorie) => categorie.name).join(", ")}</span></p>
+            <p class="categories"><strong>Kategori:</strong> : <span>${restaurant.categories.map((categorie) => categorie.name).join(', ')}</span></p>
             <p class="city"><strong>Kota:</strong> ${restaurant.city}</p>
             <p class="address"><strong>Alamat:</strong> ${restaurant.address}</p>
         </div>
@@ -19,38 +19,40 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <div class="column menu-column">
             <h2>Menu Makanan</h2>
             ${restaurant.menus.foods
-              .map(
-                (food) => `
+    .map(
+      (food) => `
               <ul class="menu-list">
                   <li class="menu-item">${food.name}</li>
               </ul>
-            `
-              )
-              .join("")}
+            `,
+    )
+    .join('')}
         </div>
         <div class="column menu-column">
             <h2>Menu Minuman</h2>
             ${restaurant.menus.drinks
-              .map(
-                (drink) => `
+    .map(
+      (drink) => `
               <ul class="menu-list">
                   <li class="menu-item">${drink.name}</li>
               </ul>
-            `).join("")}
+            `,
+    ).join('')}
         </div>
     </div>
     <div class="row">
       <h2 class="review-customer-heading">Pendapat Mereka</h2>
         <div class="column review-column">
             ${restaurant.customerReviews
-              .map(
-                (cust) => `
+    .map(
+      (cust) => `
             <div class="review-card">
                 <h5 class="review-title">${cust.name} ⭐️5</h5>
                 <p class="review-text">${cust.review}</p>
                 <p class="review-date">${cust.date}</p>
             </div>
-            `).join("")}
+            `,
+    ).join('')}
         </div>
     </div>
   </div>

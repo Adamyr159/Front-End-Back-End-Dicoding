@@ -25,6 +25,15 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    // Tambahkan script setelah page.afterRender()
+    // agar skip to content berjalan dengan baik pada halaman detail dan favorite.
+    // Jangan lupa tambahkan tabindex="0" juga pada id mainContent.
+    const skipLinkElem = document.querySelector('.skip-link');
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#mainContent').focus();
+    });
   }
 }
 
