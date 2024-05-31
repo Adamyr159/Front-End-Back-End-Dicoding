@@ -1,10 +1,16 @@
 import CONFIG from '../../globals/config';
 
+const small = 'small/';
+const medium = 'medium/';
+
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="container">
     <div class="row">
         <div class="column image-column">
-            <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" class="restaurant-image" crossorigin="anonymous">
+          <picture>
+            <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL + small +restaurant.pictureId}" class="lazyload">
+            <img src="https://picsum.photos/id/666/800/450?grayscale" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="Restoran ${restaurant.name || '-'} Kota ${restaurant.city}" class="restaurant-image lazyload" crossorigin="anonymous">
+          </picture>
         </div>
         <div class="column details-column">
             <h2 class="resto-name">${restaurant.name}</h2>
@@ -61,7 +67,10 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
-      <img class="restaurant-item__header__poster" alt="${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" crossorigin="anonymous">
+      <picture>
+        <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL+ small + restaurant.pictureId}" class="lazyload">
+        <img class="restaurant-item__header__poster lazyload" src="https://picsum.photos/id/666/800/450?grayscale" alt="${restaurant.name}" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="Restoran ${restaurant.name || '-'} Kota ${restaurant.city}" crossorigin="anonymous">
+      </picture>
       <div class="restaurant-item__header__rating">
         <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
       </div>
