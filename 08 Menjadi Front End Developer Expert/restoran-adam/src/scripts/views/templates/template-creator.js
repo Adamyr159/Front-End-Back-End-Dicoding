@@ -9,7 +9,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <div class="column image-column">
           <picture>
             <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL + small +restaurant.pictureId}" class="lazyload">
-            <img src="https://picsum.photos/id/666/800/450?grayscale" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="Restoran ${restaurant.name || '-'} Kota ${restaurant.city}" class="restaurant-image lazyload" crossorigin="anonymous">
+            <img src="/images/loading-wireframe.png" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="Restoran ${restaurant.name || '-'} Kota ${restaurant.city}" class="restaurant-image lazyload" crossorigin="anonymous">
           </picture>
         </div>
         <div class="column details-column">
@@ -69,7 +69,7 @@ const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-item__header">
       <picture>
         <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL+ small + restaurant.pictureId}" class="lazyload">
-        <img class="restaurant-item__header__poster lazyload" src="https://picsum.photos/id/666/800/450?grayscale" alt="${restaurant.name}" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="Restoran ${restaurant.name || '-'} Kota ${restaurant.city}" crossorigin="anonymous">
+        <img class="restaurant-item__header__poster lazyload" src="/images/loading-wireframe.png" alt="${restaurant.name}" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="Restoran ${restaurant.name || '-'} Kota ${restaurant.city}" crossorigin="anonymous">
       </picture>
       <div class="restaurant-item__header__rating">
         <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
