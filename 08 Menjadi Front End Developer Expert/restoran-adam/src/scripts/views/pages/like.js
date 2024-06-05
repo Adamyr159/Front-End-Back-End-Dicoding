@@ -6,6 +6,7 @@ const Like = {
     return `
     <div class="content">
       <div id="restaurants" class="restaurants">
+        <h2 class="restaurant-item__not__found">Tidak ada restoran yang ditampilkan</h2>
       </div>
     </div>
       `;
