@@ -4,23 +4,23 @@ const {
   getNoteByIdHandler,
   editNoteByIdHandler,
   deleteNoteByIdHandler,
-} = require("./handler");
+} = require('./handler');
 
 /* eslint-disable linebreak-style */
 const routes = [
   {
-    method: "POST",
-    path: "/notes",
+    method: 'POST',
+    path: '/notes',
     handler: addNoteHandler,
   },
   {
-    method: "GET",
-    path: "/notes",
+    method: 'GET',
+    path: '/notes',
     handler: getAllNotesHandler,
   },
   {
-    method: "GET",
-    path: "/notes/{id}",
+    method: 'GET',
+    path: '/notes/{id}',
     handler: getNoteByIdHandler,
   },
   {
