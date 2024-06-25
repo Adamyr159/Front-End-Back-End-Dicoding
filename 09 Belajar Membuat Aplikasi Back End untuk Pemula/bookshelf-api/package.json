@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "SET PORT=9000 && nodemon ./src/server.js",
+    "start": "SET PORT=9000 && node ./src/server.js",
+    "start-dev": "SET PORT=9000 && nodemon ./src/server.js",
     "lint": "eslint ./src"
   },
   "keywords": [],
